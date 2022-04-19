@@ -1,5 +1,6 @@
 name: Linter
 
+# It only trigger when there is change in the code under Workload-Security/Migration/bash-group-mover/
 on:
   push:
     paths:
