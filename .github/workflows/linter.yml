@@ -12,7 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-   build:
+   linter-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,4 +22,4 @@ jobs:
           severity: warning
           scandir: .
           disable_matcher: false
-          format: json
+          format: gcc
