@@ -10,7 +10,7 @@ on:
       - 'Workload-Security/Migration/bash-group-mover/**'
   
   # Allows to run this workflow manually from the Actions tab
-  # workflow_dispatch:
+  workflow_dispatch:
 
 # Linter to check errors in the bash script
 jobs:
