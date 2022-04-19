@@ -20,3 +20,4 @@ jobs:
         uses: azohra/shell-linter@latest
         with:
           path: "script.sh"
+          severity: error
