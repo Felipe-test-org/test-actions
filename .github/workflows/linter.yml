@@ -19,6 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: ShellCheck
-        uses: ludeeus/action-shellcheck@master
+        uses: azohra/shell-linter@latest
         with:
-          severity: info
+          path: "*.sh*"
