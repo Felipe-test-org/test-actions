@@ -1,4 +1,4 @@
-name: Group-Mover-Linter
+name: Bash-Linter
 
 # It only trigger when there is change in the code under Workload-Security/Migration/bash-group-mover/
 on:
@@ -14,11 +14,13 @@ on:
 
 # Linter to check errors in the bash script
 jobs:
-   group-mover-linter:
+   bash-linter:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: ShellCheck
-        uses: azohra/shell-linter@latest
+        uses: ludeeus/action-shellcheck@master
         with:
-          path: "*.sh*"
+          severity: error
+          check_together: 'yes'
+          format: tty
