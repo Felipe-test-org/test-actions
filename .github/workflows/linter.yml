@@ -22,4 +22,4 @@ jobs:
         uses: azohra/shell-linter@latest
         with:
           path: "Workload-Security/Migration/bash-group-mover/group_mover.sh"
-          severity: error
+          severity: warning
