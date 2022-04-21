@@ -14,13 +14,13 @@ on:
 
 # Linter to check errors in the bash script
 jobs:
-   bash-linter:
+   check-linter:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: ShellCheck
+      - name: Run ShellCheck Action
         uses: ludeeus/action-shellcheck@master
         with:
-          severity: error
+          severity: style
           check_together: 'yes'
           format: tty
