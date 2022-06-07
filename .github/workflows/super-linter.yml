@@ -27,5 +27,9 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_PYTHON_PYLINT: true
           VALIDATE_BASH: true
+          VALIDATE_POWERSHELL: true
+          VALIDATE_CLOUDFORMATION: true
+          VALIDATE_JSON: true
+          VALIDATE_YAML: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
