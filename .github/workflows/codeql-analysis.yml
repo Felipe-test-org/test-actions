@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: "Code Scanning"
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
-    - cron: '27 21 * * 6'
+    - cron: '0 9 * * MON'
 
 jobs:
   analyze:
@@ -17,13 +17,10 @@ jobs:
       actions: read
       contents: read
       security-events: write
-
     strategy:
       fail-fast: false
       matrix:
         language: [ 'python', 'javascript' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
-        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
