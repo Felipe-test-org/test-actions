@@ -22,13 +22,12 @@ jobs:
           fetch-depth: 0
 
       - name: Lint Code Base
-        uses: github/super-linter@v4
+        uses: github/super-linter:slim-v4
         env:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_PYTHON_PYLINT: true
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_BASH: true
-          VALIDATE_POWERSHELL: true
           VALIDATE_CLOUDFORMATION: true
           VALIDATE_JSON: true
           VALIDATE_YAML: true
