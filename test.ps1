@@ -1,5 +1,5 @@
-# Place this script into a task scheduler on Windows with "Highest priveleges" and have the task start on startup/login depending how you want this to run. 
-# You can also just execute this script at anytime on a machine as long as you are executing out of the directory. 
+# Place this script into a task scheduler on Windows with "Highest priveleges" and have the task start on startup/login depending how you want this to run.
+# You can also just execute this script at anytime on a machine as long as you are executing out of the directory.
 # This script will automatically identify what is installed and what needs to be removed. The Script has ONE goal and thats to remove anything with Apex One and install Cloud One.
 
 # SCUT tool and Cloud One install script must all exist in the same folder/directory when running this script
@@ -25,8 +25,9 @@ if ($apexExists -eq $true) {
     try {
         $p = Start-Process ".\SCUT.exe" -ArgumentList $arguments -wait -NoNewWindow -PassThru
         $p.HasExited
-        $p.ExitCode    
-    } catch { 
+        $p.ExitCode
+    }
+    catch {
         Write-Warning "Start-Process encounter error: $_"
         Return # script failed
     }
