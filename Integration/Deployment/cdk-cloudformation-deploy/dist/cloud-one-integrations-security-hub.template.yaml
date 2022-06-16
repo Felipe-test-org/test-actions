@@ -1,5 +1,5 @@
 Parameters:
-  CloudOneId
+  CloudOneId:
     Type: String
     Description: Cloud One Account id
   BootstrapVersion:
